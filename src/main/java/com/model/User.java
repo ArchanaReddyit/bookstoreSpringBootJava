@@ -1,5 +1,4 @@
 package com.model;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,22 +7,23 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="userRepository")
+@Table(name="USERTABLE")
 
 public class User {
-	@Id
-	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
 	
-	@Column(name="name")
-	private String name;
-	
-	@Column(name="password")
-	private String password;
-	
-	@Column(name="type")
-	private String type;
+	 @Id
+	   @Column(name="id")
+	   @GeneratedValue(strategy = GenerationType.AUTO)
+	   private Long id;
+	   
+	   @Column(name="name")
+	   private String name;
+	   
+	   @Column(name="password")
+	   private String password;
+	   
+	   @Column(name="type")
+	   private String type;
 
 	public Long getId() {
 		return id;
@@ -56,6 +56,6 @@ public class User {
 	public void setType(String type) {
 		this.type = type;
 	}
-
-	
-}
+	   
+	   
+	}
